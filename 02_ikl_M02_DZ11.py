@@ -21,5 +21,5 @@ name = input()  # количество букв в имени = количест
 for i in name:
     print_params_01()
     print_params_02(name)
-print('\n')  # просто первод пустой строки
+print('\n')  # просто перевод пустой строки
 print_params_01(), print_params_02('Урааааа, сам решил.. Кто молодец? ... Я молодец :)\n')
