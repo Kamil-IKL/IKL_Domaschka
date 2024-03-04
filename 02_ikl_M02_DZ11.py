@@ -4,9 +4,9 @@ def print_params_01():  # самая простая функция
 print_params_01()
 print_params_01()
 print_params_01()
+
+
 print('\n**** Вариант 02 ****')
-
-
 def print_params_02(*args):  # функция "запрашивающая" (не помню точно, как называется)... можно вводить любой аргумент
     print(*args, *args)
 print_params_02('Kamil')
