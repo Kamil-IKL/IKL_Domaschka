@@ -25,7 +25,7 @@ def test(*args):  # test - функция с произвольным число
 test(2, 'Венедикт', False)
 
 
-def factor():
+def factorial():
     n = int(input('введите число для расчета факториала из числа = '))
     if n < 0:
         return print('некорректное число')
@@ -35,10 +35,10 @@ def factor():
             return n
         return n * test_fact(n - 1)
 
-    print(test_fact(n))
+    print(f'Факториал = {test_fact(n)}')
 
 
-factor()
+factorial()
 
 
 
