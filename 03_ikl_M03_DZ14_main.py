@@ -17,14 +17,29 @@
 #
 #
 
+def test(*args):  # test - функция с произвольным числом параметров
+    print(args)  # запаковка переданных параметров, выйдет в виде кортежа
+    print(*args)  # распаковка переданных параметров
 
-def test(*args):
-    print('test - функция с произвольным числом параметров')
-#    print('тип args: ', type(args))
-     print(args)
 
-test(2,50,60,'kamil', 5000)
-print(test(12,20,5,55,78,'kaml'))
+test(2, 'Венедикт', False)
+
+
+def factor():
+    n = int(input('введите число для расчета факториала из числа = '))
+    if n < 0:
+        return print('некорректное число')
+
+    def test_fact(n):
+        if n <= 1:
+            return n
+        return n * test_fact(n - 1)
+
+    print(test_fact(n))
+
+
+factor()
+
 
 
 
