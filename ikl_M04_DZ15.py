@@ -4,5 +4,5 @@ def test_01():
 def test_02(name):
     print(f'Hello, world and {name}')
 
-test_01()
-test_02('Muhtar')
+# test_01()
+# test_02('Muhtar')
