@@ -12,18 +12,14 @@ def are_you_playing_banjo(name):
         if i == 'R' or i == 'r':
             print(f'{name} play the banjo.')
         pass
+    #    return
+    print(f'{name} does not play banjo.')
     return
-return (f'{name} does not play banjo.')
+
 
 are_you_playing_banjo('Ri')
-
-# name = input('Enter , what is your name ?')
-# for i in name:
-#     if i == 'R' or i == 'r':
-#         print(f'{name}! Вы играете на банджо.')
-#     pass
-
-# print(f'{name}! Спасибо, ждем в следующем году.')
+are_you_playing_banjo('ra')
+are_you_playing_banjo('Kamil')
 
 
 
