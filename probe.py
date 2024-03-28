@@ -20,7 +20,7 @@ def are_you_playing_banjo(name):
         print(f'{name} play the banjo.')
     else:
         print(f'{name} does not play banjo.')
-    return name
+    # return name
 
 are_you_playing_banjo('Rim')
 are_you_playing_banjo('rom')
