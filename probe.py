@@ -8,19 +8,23 @@
 # Указанные имена всегда являются допустимыми строками.
 
 def are_you_playing_banjo(name):
-    for i in name:
-        if i == 'R' or i == 'r':
-            print(f'{name} play the banjo.')
-        pass
-    #    return
-    print(f'{name} does not play banjo.')
-    return
+    # for i in name:
+    #     if i == 'R' or i == 'r':
+    #         print(f'{name} play the banjo.')
+    #     pass
+    # # print(f'{name} does not play banjo.')
+    # return
 
+    # print(type(name))
+    if name[0] == 'R' or name[0] == 'r':
+        print(f'{name} play the banjo.')
+    else:
+        print(f'{name} does not play banjo.')
+    return name
 
-are_you_playing_banjo('Ri')
-are_you_playing_banjo('ra')
-are_you_playing_banjo('Kamil')
-
+are_you_playing_banjo('Rim')
+are_you_playing_banjo('rom')
+are_you_playing_banjo('Irina')
 
 
 
