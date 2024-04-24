@@ -2,8 +2,9 @@ class Buiding:  # создал класс строительство
     total = 0  # создал атрибут класса
 
     def __init__(self):  # создал инициализатор для класса
-        Building = Buiding.total + 1
-
+        Buiding.total += 1
+        # Building = Buiding.total + 1 # это ошибка (тотал не увеличивается)
+        Building = Buiding.total
 
 
 # Building_1 = Buiding()
@@ -16,6 +17,6 @@ class Buiding:  # создал класс строительство
 
 for i in range(40):
     Building = Buiding()
-    print(Building, type(Building), id(Building))
+    print(Buiding.total, Building, type(Building), id(Building))
 
 
