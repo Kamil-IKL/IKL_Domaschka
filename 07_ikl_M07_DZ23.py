@@ -1,4 +1,4 @@
-file_01 = open(r'C:\Users\Компьютер\Documents\PYTHON_PROJECT_URBAN\06_Modul_IKL_pythonProject\07_ikl_M07_dz23.txt')
+file_01 = open('07_ikl_M07_dz23.txt')
 print(file_01.read())  # вывожу на консоль содержимое файла
 print(file_01.tell())  # проверяю, где корретка находится.
 # file_01.seek(0) # перевод корретки на начало файла
