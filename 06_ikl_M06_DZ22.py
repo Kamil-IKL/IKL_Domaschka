@@ -62,7 +62,7 @@ Avto_2 = Car()
 Avto_2.horse_powers(100)
 print(Avto_2.__dict__)
 
-print(f'\n==========создаю еще обин объект класса Nissan (так... для проверки себя)============')
+print(f'\n==========создаю еще один объект класса Nissan (так... для проверки себя)============')
 Avto_car = Nissan()
 print(f'Тип автомобиля - {Avto_car.vehicle_type}')
 print(f'Стоимость автомобиля - {Avto_car.price}')
