@@ -46,9 +46,9 @@ print(f'Команды {team1} и {team2} решили {score_1} и {score_2} з
 if score_1 == score_2:
     chalenge_result = print(f'Результат биьвы: Команды {team1} и {team2} сыграли в ничью !')
     if score_1 > score_2:
-        chalenge_result = print(f'Результат битвы: победа команды {team1} !')
+        chalenge_result = print(f'Результат битвы: Победа команды {team1} !')
 else:
-    chalenge_result = print(f'Результат битвы: победа команды {team2} !')
+    chalenge_result = print(f'Результат битвы: Победа команды {team2} !')
 
 tasks_total = score_1 + score_2
 time_avg = 350.4
