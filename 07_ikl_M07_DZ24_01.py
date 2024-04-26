@@ -24,9 +24,9 @@ print(f'{team2} решили данные задачи за {team2_time:0.2f} c 
 if score_1 == score_2:
     chalenge_result = print(f'Результат биьвы: Команды {team1} и {team2} сыграли в ничью !')
     if score_1 > score_2:
-        chalenge_result = print(f'Результат битвы: победа команды {team1} !')
+        chalenge_result = print(f'Результат битвы: Победа команды {team1} !')
 else:
-    chalenge_result = print(f'Результат битвы: победа команды {team2} !')
+    chalenge_result = print(f'Результат битвы: Победа команды {team2} !')
 
 print(f'\n{" Статистика ":*^50}')
 time_avg = round((team1_time + team2_time) / tasks_total, 2)  # вычисляю и сразу округляю до сотых
