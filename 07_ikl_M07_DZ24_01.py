@@ -21,12 +21,16 @@ print('{0} решили данные задачи за {1:0.2f} c !'.format(team
 # указал для поля 1 два знака после запятой
 print(f'{team2} решили данные задачи за {team2_time:0.2f} c !')
 
-if score_1 > score_2 or score_1 == score_2 and team1_time > team2_time:
+if score_1 == score_2 and team1_time == team2_time:
+    chalenge_result = print(f'Результат биьвы: Команды {team1} и {team2} сыграли в ничью !')
+elif score_1 == score_2 and team1_time < team2_time:
     chalenge_result = print(f'Результат битвы: Победа команды {team1} !')
-elif score_1 < score_2 or score_1 == score_2 and team1_time < team2_time:
+elif score_1 == score_2 and team1_time > team2_time:
     chalenge_result = print(f'Результат битвы: Победа команды {team2} !')
-else:
-    chalenge_result = print(f'Результат битвы: Команды {team1} и {team2} сыграли в ничью !')
+elif score_1 > score_2: # and team1_time != team2_time:
+    chalenge_result = print(f'Результат битвы: Победа команды {team1} !')
+elif score_1 < score_2: # and team1_time != team2_time:
+    chalenge_result = print(f'Результат битвы: Победа команды {team2} !')
 
 print(f'\n{" Статистика ":*^50}')
 time_avg = round((team1_time + team2_time) / tasks_total, 2)  # вычисляю и сразу округляю до сотых
