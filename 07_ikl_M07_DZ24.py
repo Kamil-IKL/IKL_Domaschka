@@ -22,7 +22,7 @@ print('\n********** Использование format() **********')
 # Переменные: время за которое команда 2 решила задачи (team1_time).
 # Пример итоговой строки: " Волшебники данных решили задачи за 18015.2 с !"
 
-score_2 = 42
+score_2 = 40
 print('Команда {} данных решила задач: {} !'.format(team2, score_2))  # порядок вывода распределяются по умолчанию
 # print('Команда {1} данных решила задач: {0}!'.format(score_2, team2)) # порядок вывода аргументов определяю сам
 
@@ -40,21 +40,16 @@ print(f'\n{" Использование f-строк ":*^44}')
 # Переменные: количество задач (tasks_total) и среднее время решения (time_avg).
 # Пример итоговой строки: "Сегодня было решенно 82 задач, в среднем по 350.4 секунды на задачу!."
 
-score_1 = 40
+score_1 = 42
 print(f'Команды {team1} и {team2} решили {score_1} и {score_2} задач cоответственно.')
 
-if score_1 == score_2:
-    chalenge_result = print(f'Результат биьвы: Команды {team1} и {team2} сыграли в ничью !')
-    if score_1 > score_2:
-        chalenge_result = print(f'Результат битвы: Победа команды {team1} !')
-else:
+if score_1 > score_2 or score_1 == score_2 and team1_time > team2_time:
+    chalenge_result = print(f'Результат битвы: Победа команды {team1} !')
+elif score_1 < score_2 or score_1 == score_2 and team1_time < team2_time:
     chalenge_result = print(f'Результат битвы: Победа команды {team2} !')
+else:
+    chalenge_result = print(f'Результат битвы: Команды {team1} и {team2} сыграли в ничью !')
 
 tasks_total = score_1 + score_2
 time_avg = 350.4
 print(f'Сегодня было решено {tasks_total} задач, в среднем по {time_avg} секунды на задачу !')
-
-# team1_time = round(350.4 * tasks_total - team2_time, 1) # вычисляю время решение задач команды team1 ("Мастера кода")
-# и округляю до десятых
-# time_avg = round((team1_time + team2_time) / tasks_total,1) # вычисляю вычисляю среднее время на 1 задачу и округляю
-# print(time_avg) # проверка расчета среднего времени
