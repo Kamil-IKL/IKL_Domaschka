@@ -6,7 +6,7 @@ directory = r'proekt_DZ25'
 for root, dirs, files in os.walk(directory):
     for file in files:
         filepath = os.path.join(root, file) # полный путь к файлу
-        filetime = os.path.getmtime(filepath) # время создания файла
+        filetime = os.path.getmtime(filepath) # время последнего изменения файла
         formatted_time = time.strftime("%d.%m.%Y %H:%M", time.localtime(filetime)) # перевожу в формат ДД.ММ.ГГГГ
         filesize = os.path.getsize(filepath) # определяю размер файла
         parent_dir = os.path.dirname(filepath) # определяю в какой папке находится файл
