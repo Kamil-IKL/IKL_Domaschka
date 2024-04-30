@@ -1,4 +1,6 @@
 print(f'\n***** Исключение: обработка ValueError (Ошибка определения значения) *****')
+
+
 def string_int(s):
     try:
         return int(s)
@@ -11,35 +13,41 @@ print('Проверка на входе типа переменной s: ', type
 print(f'Проверка после вызова функции, тип переменной s: {type(string_int(s))}')
 
 print(f'\n******* Исключение: обработка (Ошибка "Файл не найден"), IOError (Ошибка ввода-вывода) *******')
+
+
 def read_file(filename):
     try:
-        with open(filename, 'r', encoding = 'UTF-8') as file:
+        with open(filename, 'r', encoding='UTF-8') as file:
             return file.read()
     except FileNotFoundError:
         print('Ошибка: Ты не указал путь к файлу или перемести файл в текущую папку проекта')
     except IOError:
         print('Ошибка: Неправильно ввел название файла')
 
+
 # filename = (r'C:\Users\Камиль\Documents\00_UNIVER_URBAN\08_dom_zadan_26.txt')
 filename = ('08_dom_zadan_26.txt')
-print(read_file(filename)) # чтение содержимого файла
-
+print(read_file(filename))  # чтение содержимого файла
 
 print('\n**** Исключение: обработка ZeroDivisionError(Ошибка деления на ноль), TypeError(Ошибка типа) ****')
+
+
 def divide_numbers(a, b):
     try:
-        print(f'Результат = {a / b:0.0f}') # округлил до целого числа
+        print(f'Результат = {a / b:0.0f}')  # округлил до целого числа
     except ZeroDivisionError as z:
         print(f'Ошибка: второй аргумент функции = {b} (деление на ноль)... будь внимательнее !!')
     except TypeError as z:
         print('Ошибка: аргументы функции должны быть числовыми, а не текст')
-    else: # 'этот блок исполняется только, если нет исключений
+    else:  # 'этот блок исполняется только, если нет исключений
         print('Ты молодец!!!! Исключений не произошло')
 
 
-divide_numbers(26,13)
+divide_numbers(26, 13)
 
 print('\n****** Исключение: обработка IndexError (Ошибка индексирования), TypeError(Ошибка типа) ******')
+
+
 def access_list_element(lst, index):
     try:
         return lst[index]
@@ -47,8 +55,9 @@ def access_list_element(lst, index):
         print('Ошибка: Чувак... у тебя элементов в списке меньше. Указывай индекс правильно')
     except TypeError:
         print('Ошибка: Чувак... обрати внимание на Индекс. Он должен быть целым числом')
-    finally: # выходит всегда, при любом раскладе... как напоминалка
+    finally:  # выходит всегда, при любом раскладе... как напоминалка
         print('Обращаю внимание, работаем только со списком... ')
+
 
 my_list = ['Мартини', 12, 'LibeFrauMilch', 8]
 my_index = 22
