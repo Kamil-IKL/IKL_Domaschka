@@ -9,7 +9,7 @@ def f1(a, b):
 
 
 # warnings.simplefilter("error") # выводит предупреждение и останавливает выполнение кода
-# warnings.simplefilter("ignore") # игнорирует (предупреждения не выводит), код работает
+warnings.simplefilter("ignore") # игнорирует (предупреждения не выводит), код работает
 # warnings.simplefilter(("always")) # выводит предупреждение все и всегда, код выполняется
 print('Вариант № 1 ... b = 0,3')
 f1(10, 0.3)
