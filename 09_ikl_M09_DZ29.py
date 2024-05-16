@@ -16,7 +16,7 @@ res = map(lambda x: x ** 2, My_List)  # использую lambda - аноним
 print(f'Это тип объекта {type(res)} и наш новый список {list(res)}')
 
 print(f'\n {'Вариант 2, функция "map" (использую свои функции)':*^70}')
-res = map(my_square, My_List)
+res = sorted(map(my_square, My_List)) # дополнительно упорядочил по возрастанию (sorted)
 print(f'Это тип объекта {type(res)} и наш новый список {list(res)}')
 
 res = map(my_odd_numbers, My_List)
