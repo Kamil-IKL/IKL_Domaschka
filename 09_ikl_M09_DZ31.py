@@ -14,7 +14,7 @@ class EvenNumbers:
     def __next__(self):
         if self.count < self.end:
             self.count += 1
-            if self.count % 2 == 0:
+            if self.count % 2 == 0:  # сделал условие для четных чисел
                 return self.count
         else:
             raise StopIteration
