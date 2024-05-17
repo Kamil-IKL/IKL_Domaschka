@@ -62,9 +62,10 @@ print(f'\n{"Задача 3: Вызываемые Объекты ":=<70}')
 class Rect:
     def __init__(self):
         self.a = a = int(input('Введите сторону a = '))
+        self.b = b = int(input('Введите сторону b = '))
 
     def __call__(self):
-        self.b = b = int(input('Введите сторону b = '))
+        # self.b = b = int(input('Введите сторону b = ')) " устал к вечеру, вот и написал сюда, а  надо было в инит (что и сделал)
         return self.a * self.b
 
 
