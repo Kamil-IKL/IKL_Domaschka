@@ -6,7 +6,7 @@ class EvenNumbers:
     def __init__(self, start, end):
         self.start = start
         self.end = end
-        self.count = start  # это для счетчика
+        self.count = start - 1  # это для счетчика
 
     def __iter__(self):  # Без этого метода итератора объект неитерируемый (for работать не будет!!!)
         return self
@@ -17,8 +17,10 @@ class EvenNumbers:
             if self.count % 2 == 0:  # сделал условие для четного числа
                 return self.count  # возвращаю текущее число
             else:
-                self.count += 1
-                return self.count
+                if self.count < self.end:  # это условие сделал, чтобы не выходить из диапазона по "верхнему" числу "end"
+                    self.count += 1
+                    return self.count
+                return ''  # без ковычек будет выходить None
         else:
             raise StopIteration
 
