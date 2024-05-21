@@ -11,7 +11,7 @@ class EvenNumbers:
     def __iter__(self):  # Без этого метода итератора объект неитерируемый (for работать не будет!!!)
         return self
 
-    def __next__(self):
+    def __next__(self):  # в этом методе описывем как и что нужно итерировать(перебирать)
         if self.count < self.end:
             self.count += 1  # это счетчик
             if self.count % 2 == 0:  # сделал условие для четного числа
