@@ -37,7 +37,7 @@ class Knight(threading.Thread):
             print(f'Боец {self.name} можешь спать "...в Багдаде все спокойно..."')
         else:
             print(f'Боец {self.name} на нас напали !')
-            exit(print(Knight.counter_day(self)))  # вызываю функцию счетчика дней и 
+            print(Knight.counter_day(self))  # вызываю функцию счетчика дней
         # print('Все бои закончились ! Ура ... Всех победили !!!'.upper())  # вывод заглавными буквами
 
 
