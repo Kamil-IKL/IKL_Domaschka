@@ -9,27 +9,41 @@
 import time
 import threading
 
-
-def counter_day():  # функция счетчика дней, где 1 секунда = 1 день
-    a = 0
-    while True:
-        time.sleep(1)
-        a += 1
-        print(a)
+lock = threading.Lock  # создал замок (пока на всякий случай, пусть будет)
 
 
-class Knight:
-    def __init__(self):
-        self.name = name = input('Рыцаря зовут; ')
-        self.skill = skill = int(input(f'Выберите уровень рыцаря ("Птинец" = 1, "Орел" = 2, "Асс" = 3 : '))
+class Knight(threading.Thread):
+    def __init__(self, name, skill):
+        super().__init__()  # метод вызова всех функций из класса родителя "Thread"
+        self.name = name
+        self.skill = skill
+        global enemy, lock
 
-    def skill(self):
-        if skill == 3 and skill == 'Асс':
-            time = 20
+    def counter_day(self):  # функция счетчика дней, где параметр "skill" - нужен для счетчика умения
+        a = 0
+        b = enemy
+        while True:
+            time.sleep(1)
+            a += 1
+            b -= self.skill
+            if 0 <= b < self.skill:  # сделал условие для окончания "сражения"
+                print(f'Боец {self.name} победил врагов за {a} дня(дней)')
+                break
+            else:
+                print(f'Боец {self.name} сражается {a} день(дня)..., осталось {b} врагов')
+
+    def run(self):  # переопределяю метод run под свое задание
+        if enemy <= 0:  # проверяю "есть враги или нет"
+            print(f'Боец {self.name} можешь спать "...в Багдаде все спокойно..."')
+        else:
+            print(f'Боец {self.name} на нас напали !')
+            print(Knight.counter_day(self))  # вызываю функцию счетчика дней
 
 
-enemy = int(input(f'Введите количество нападающих врагов: '))
-# skill = int(input(f'Выберите уровень рыцаря ("Птинец" = 1, "Орел" = 2, "Асс" = 3 : '))
-Knight_01 = Knight()
-print(type(Knight_01))
-Knight_02 = Knight()
+enemy = int(input(f'Введите количество нападающих врагов: '))  # сделал запрос на количество врагов
+Knight_01 = Knight('Kam', 20)  # создал бойца c умением (число)
+Knight_02 = Knight("Rim", 10)  # создал бойца c умением (число)
+Knight_01.start()  # запускаю поток по первому бойцу
+Knight_02.start()  # запускаю поток по второму бойцу
+# Knight_01.join() # так и не понял для чего он нужен
+print(threading.enumerate())  # проверяю "живые" потоки (сколько потоков работает) на данный момент
