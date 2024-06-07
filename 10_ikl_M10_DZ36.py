@@ -15,7 +15,7 @@ def account_number():
     import random
     account = ''
     for i in range(5):
-        account = account + random.choice(list('0123456789'))
+        account += random.choice(list('0123456789'))
     return account
 
 
