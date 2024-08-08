@@ -1,5 +1,5 @@
 """
-Необходимо создать функцию, которая принимает объект (любого типа) в качестве аргумента и проводит интроспекцию 
+Необходимо создать функцию, которая принимает объект (любого типа) в качестве аргумента и проводит интроспекцию
 этого объекта, чтобы определить его тип, атрибуты, методы, модуль, и другие свойства.
 
 1. Создайте функцию introspection_info(obj), которая принимает объект obj.
@@ -12,13 +12,13 @@
    - Другие интересные свойства объекта, учитывая его тип (по желанию).
 """
 
-
-
 import inspect
 from pprint import pprint
+
+
 # help(inspect)
 
-def object_info(obj):
+def object_info(obj):  # функция для интроспекции объекта
     # Получаю тип объекта
     obj_type = type(obj).__name__
 
@@ -38,6 +38,7 @@ def object_info(obj):
         'module': obj_module,
     }
 
+
 class Human:
     def __init__(self, age: int, name: str):
         self.age = age
@@ -53,17 +54,16 @@ class Human:
             print(f'{self.name}, уже поздно !!! Вам дальше по коридору и направо...!')
 
 
-human_01 = Human(12,'Kamil')
+human_01 = Human(12, 'Kamil')
 human_01.my_info()
-human_02 = Human(52,'Антошка')
+human_02 = Human(52, 'Антошка')
 human_02.my_info()
 
 # интроспекция
 introsp_obj = object_info(human_01)
 print(introsp_obj)
 
-
-
+# # интроспекция
 # print(type(human_02)) # узнаем, какой тип объекта (переменная, класс, функция) ?
 # pprint(dir(Human)) # узнаем, какие методы и атрибуты у объекта ?
 # print(hasattr(human_01, 'name')) # проверяю наличие атрибута "name" в объекте
@@ -75,9 +75,3 @@ print(introsp_obj)
 # print(callable(human_02.name)) # невызываемый тип данных
 # print(callable(human_02.my_info)) # вызываемый метод
 # human_02.my_info() # проверка
-
-
-
-
-
-
